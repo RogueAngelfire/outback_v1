@@ -4,8 +4,7 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col">
-            </div>
+            <div class="col"></div>
         </div>
     </div>
 {% endblock %}
@@ -26,8 +25,8 @@
                 {% if bag_items %}
                     <div class="table-responsive rounded"></div>
                 {% else %}
-                    <p class="lead mb">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-ouyline-black rounded-0 btn-lg">
+                    <p class="lead mb-5">Your bag is empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -37,6 +36,4 @@
             </div>
         </div>
     </div>
-
-
 {% endblock %}
