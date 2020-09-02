@@ -74,13 +74,13 @@ body {
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
@@ -102,7 +102,7 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-/*.............................Bootstrap Toast */
+/* ------------------------------- bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -115,7 +115,7 @@ a.category-badge > span.badge:hover {
     overflow: visible;
 }
 
-toast-capper {
+.toast-capper {
     height: 2px;
 }
 
@@ -170,16 +170,16 @@ toast-capper {
     overflow-y: auto;
 }
 
-/*.............................Media Queries */
+/* -------------------------------- Media Queries */
 
-/* Slightly larger container on x1 screens */
+/* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-    .container {
+  .container {
     max-width: 80%;
-    }
+  }
 }
 
-/* fixed top Nav Bar only on medium and up */
+/* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -188,19 +188,19 @@ toast-capper {
         left: 0;
         z-index: 1030;
     }
-    
+
     .header-container {
         padding-top: 164px;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
-@media (max-with: 991px) {
-    .heading-container {
+@media (max-width: 991px) {
+    .header-container {
         padding-top: 116px;
     }
 
     body {
-        height: cal(100vh - 116px);
+        height: calc(100vh - 116px);
     }
 }
