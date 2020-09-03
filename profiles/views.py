@@ -42,5 +42,5 @@ def order_history(request, order_number):
         'order': order,
         'from_profile': True,
     }
-
-    return render(request, template, context)
+    # Added contents here also as no context in our version
+    return render(request, template, context, contents)
