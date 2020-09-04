@@ -178,5 +178,5 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-    # contents and context has become an issue with project
-    return render(request, template, context, contents)    
+    
+    return render(request, template, context)    
