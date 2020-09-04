@@ -15,8 +15,10 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-
-    form = UserProfileForm(instance=profile)
+        else:
+            messages.errors(request, 'Update failed. please ensure the form is valid.')
+    else:
+        form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
@@ -42,5 +44,5 @@ def order_history(request, order_number):
         'order': order,
         'from_profile': True,
     }
-    # Added contents here also as no context in our version
-    return render(request, template, context, contents)
+    
+    return render(request, template, context)
