@@ -8,7 +8,7 @@ from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
-from bag.contents import bag_contents 
+from bag.contexts import bag_contents
 
 import stripe
 import json
@@ -135,7 +135,7 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
-
+    
     return render(request, template, context)
 
 
