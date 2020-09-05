@@ -122,16 +122,13 @@ WSGI_APPLICATION = 'outback.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR / 'db.sqlite3'),
-#    }
-#}
-
-DATABASES = {
-    'DEFAULT': dj_database_url.parse(postgres://utzlzjxbadvhbn:8a06ca4891b535ceeadc0e2c4af5f00ddef98a88433c3a26ad76ec8687c8a32d@ec2-54-217-213-79.eu-west-1.compute.amazonaws.com:5432/de6apf14gflusq)
+ DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR / 'db.sqlite3'),
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
