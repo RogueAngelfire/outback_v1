@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEPLOYMENT' in os.environ
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['outback.heroku.com', 'localhost']
+ALLOWED_HOSTS = ['outback.heroku.com', 'localhost', '8000-fbdf4de7-00b5-42c7-aee9-a97a6f413ca5.ws-eu01.gitpod.io']
 
 
 # Application definition
@@ -182,9 +182,9 @@ if 'USE_AWS' in os.environ:
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-        'CascheControl': 'max-age=94608000',
+        'CacheControl': 'max-age=94608000',
     }
-
+ 
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'shopoutback'
     AWS_S3_REGION_NAME = 'eu-west-2'
